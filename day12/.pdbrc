@@ -1,0 +1,23 @@
+# .pdbrc - Конфигурация для pdb
+# Автоматически загружается при запуске python -m pdb
+
+# Установка точек останова
+break variant_6_original.py:47
+break variant_6_original.py:68
+break variant_6_original.py:138
+break variant_6_original.py:71
+
+# Условная точка останова (остановка при x==3 и y==4)
+break variant_6_original.py:71 if x == 3 and y == 4
+
+# Настройка отображения
+set width 120
+set pagination off
+
+# Показать код вокруг текущей позиции при старте
+list
+
+# Команды для автоматического выполнения при останове
+# display result
+# display args
+# display kwargs

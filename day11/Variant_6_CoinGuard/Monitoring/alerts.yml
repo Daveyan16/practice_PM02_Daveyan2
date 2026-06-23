@@ -1,0 +1,23 @@
+groups:
+
+- name: backup_alerts
+
+  rules:
+
+  - alert: BackupJobFailed
+
+    expr: backup_status == 0
+
+    for: 5m
+
+  - alert: BackupTooOld
+
+    expr: (time() - backup_last_success_timestamp_seconds) > 60
+
+    for: 5m
+
+  - alert: WALDelay
+
+    expr: wal_replication_delay_seconds > 1
+
+    for: 1m

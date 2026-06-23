@@ -1,0 +1,11 @@
+День 1
+Дата: 02.06.2026
+Количество часов: 8
+Выполненные работы:
+- Установка ПО (MySQL Workbench, VS Code, Python, Git)
+- Настройка Git и GitHub
+- Создание репозитория
+- Исправление ошибки remote origin
+- Создание README.md и diary.txt
+- Первые коммиты и push на GitHub
+

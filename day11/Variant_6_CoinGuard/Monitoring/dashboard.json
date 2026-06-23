@@ -1,0 +1,28 @@
+{
+  "metrics": [
+    {
+      "name": "backup_status",
+      "type": "gauge"
+    },
+    {
+      "name": "backup_duration_seconds",
+      "type": "histogram"
+    },
+    {
+      "name": "backup_size_bytes",
+      "type": "gauge"
+    },
+    {
+      "name": "last_snapshot_age",
+      "type": "gauge"
+    },
+    {
+      "name": "wal_replication_delay",
+      "type": "gauge"
+    },
+    {
+      "name": "blockchain_sync_lag",
+      "type": "gauge"
+    }
+  ]
+}

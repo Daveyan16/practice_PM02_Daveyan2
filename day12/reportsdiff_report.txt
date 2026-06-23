@@ -1,0 +1,118 @@
+
+DIFF REPORT - Сравнение исходного и исправленного кода
+Вариант №6: Декораторы и кеширование
+
+
+
+1. ИСПРАВЛЕНИЕ ПЕРЕДАЧИ АРГУМЕНТОВ В ДЕКОРАТОРЕ
+
+
+БЫЛО (variant_6_original.py, строка 47):
+
+        result = func(args, kwargs)  # Должно быть func(*args, **kwargs)
+
+
+СТАЛО (variant_6_fixed.py, строка 97):
+
+        result = func(*args, **kwargs)
+
+ПОЯСНЕНИЕ: 
+В исходном коде аргументы передавались как кортеж и словарь, 
+а не распаковывались. Исправлено с помощью * и ** для корректной распаковки.
+
+
+2. ИСПРАВЛЕНИЕ ЛОГИЧЕСКОЙ ОШИБКИ В FORMULA
+
+
+БЫЛО (variant_6_original.py, строка 128):
+        processed = value + multiplier
+
+СТАЛО (variant_6_fixed.py, строка 158):
+
+
+        processed = value * multiplier
+
+ПОЯСНЕНИЕ:
+Исходная формула выполняла сложение вместо умножения. 
+Исправлено на умножение value * multiplier.
+
+
+
+3. ИСПРАВЛЕНИЕ ЛОГИЧЕСКОЙ ОШИБКИ В EXPENSIVE_CALCULATION
+
+
+БЫЛО (variant_6_original.py, строка 71):
+
+    result = math.sqrt(x ** 2) + y ** 2
+
+СТАЛО (variant_6_fixed.py, строка 131):
+
+    result = math.sqrt(x ** 2 + y ** 2)
+
+
+ПОЯСНЕНИЕ:
+Исходная формула вычисляла sqrt(x²) + y² вместо sqrt(x² + y²).
+Исправлено на правильную формулу евклидова расстояния.
+
+
+
+4. ИСПРАВЛЕНИЕ ЛОГИЧЕСКОЙ ОШИБКИ В CALCULATE_METRICS
+
+
+БЫЛО (variant_6_original.py, строка 148):
+
+    mean = sum(values) - len(values)
+    variance = sum((x - mean) ** 2 for x in values) / (len(values) - 1)
+
+
+СТАЛО (variant_6_fixed.py, строка 178-180):
+    mean = sum(values) / len(values)
+    variance = sum((x - mean) ** 2 for x in values) / len(values)
+
+ПОЯСНЕНИЕ:
+Исправлена формула среднего (сложение-вычитание → деление)
+Исправлена формула дисперсии (n-1 → n для генеральной совокупности)
+
+
+
+5. ИСПРАВЛЕНИЕ УТЕЧКИ ПАМЯТИ В LRU КЕШЕ
+
+
+БЫЛО (variant_6_original.py, строка 65):
+
+@lru_cache(maxsize=None)  # Без ограничения размера!
+
+СТАЛО (variant_6_fixed.py, строка 124):
+@lru_cache(maxsize=128)
+
+
+ПОЯСНЕНИЕ:
+Добавлено ограничение размера кеша до 128 элементов.
+
+
+
+6. ИСПРАВЛЕНИЕ УТЕЧКИ ПАМЯТИ В ДЕКОРАТОРЕ-КЛАССЕ
+
+
+БЫЛО (variant_6_original.py, строка 103):
+
+        self.results.append(result)  # Бесконечный рост!
+
+
+СТАЛО (variant_6_fixed.py, строка 149-151):
+
+        self.results.append(result)
+        if len(self.results) > self.max_results:
+            self.results = self.results[-self.max_results:]
+
+
+ПОЯСНЕНИЕ:
+Добавлено ограничение размера списка результатов.
+
+
+
+ИТОГО ИСПРАВЛЕНО:
+- 6 мест в коде
+- 4 типа ошибок устранены
+- Добавлен класс LimitedCache для управления кешами
+- Добавлены методы для получения статистики
