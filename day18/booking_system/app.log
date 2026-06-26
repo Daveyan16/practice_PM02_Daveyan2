@@ -1,0 +1,38 @@
+[2026-06-26 10:39:05] [INFO] [booking_system] Email успешно отправлен на to@example.com
+[2026-06-26 10:39:05] [INFO] [booking_system] SMS успешно отправлен на 79001112233
+[2026-06-26 10:39:05] [ERROR] [booking_system] Ошибка отправки SMS. Код ответа шлюза: 500
+[2026-06-26 10:48:32] [ERROR] [booking_system] Ошибка SMTP при отправке email: Connection refused
+[2026-06-26 10:48:32] [INFO] [booking_system] SMS успешно отправлен на +79001112233
+[2026-06-26 10:48:32] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:00:08] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:00:08] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:00:25] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:00:25] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:02:05] [INFO] [booking_system] Email успешно отправлен на user@example.com
+[2026-06-26 11:02:05] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:02:05] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:03:43] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:03:44] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:03:44] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:05:07] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:05:07] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:38:52] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:38:52] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:38:52] [ERROR] [booking_system] Пустые параметры для отправки email.
+[2026-06-26 11:38:52] [ERROR] [booking_system] Пустые параметры для отправки SMS.
+[2026-06-26 11:41:33] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:41:33] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:41:33] [ERROR] [booking_system] Пустые параметры для отправки email.
+[2026-06-26 11:41:33] [ERROR] [booking_system] Пустые параметры для отправки SMS.
+[2026-06-26 11:43:45] [INFO] [booking_system] Email успешно отправлен на user@example.com
+[2026-06-26 11:43:45] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:43:45] [INFO] [booking_system] SMS успешно отправлен на +79001112233
+[2026-06-26 11:43:45] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:43:45] [ERROR] [booking_system] Пустые параметры для отправки email.
+[2026-06-26 11:43:45] [ERROR] [booking_system] Пустые параметры для отправки SMS.
+[2026-06-26 11:49:07] [INFO] [booking_system] Email успешно отправлен на user@example.com
+[2026-06-26 11:49:07] [ERROR] [booking_system] Ошибка SMTP при отправке email: Server Error
+[2026-06-26 11:49:07] [INFO] [booking_system] SMS успешно отправлен на +79001112233
+[2026-06-26 11:49:07] [ERROR] [booking_system] Таймаут при отправке SMS на +79001112233
+[2026-06-26 11:49:07] [ERROR] [booking_system] Пустые параметры для отправки email.
+[2026-06-26 11:49:07] [ERROR] [booking_system] Пустые параметры для отправки SMS.
